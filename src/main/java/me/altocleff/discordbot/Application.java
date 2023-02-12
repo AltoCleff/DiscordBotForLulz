@@ -12,7 +12,7 @@ public class Application {
         JDABuilder.createLight(Config.get("token"), GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_EMOJIS_AND_STICKERS)
                 .enableCache(CacheFlag.EMOJI)
                 .addEventListeners(new Listener())
-                .setActivity(Activity.watching("в мрачное будущее"))
+                .setActivity(Activity.watching(Config.get("activity")))
                 .build();
     }
 }
